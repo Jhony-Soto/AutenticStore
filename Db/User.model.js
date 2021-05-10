@@ -18,7 +18,8 @@ const AdminModel=connect.define('administrator',{
     },
     admin_email:{
         type:sequelize.STRING(50),
-        allowNull:false
+        allowNull:false,
+        unique: true
     },
     admin_password:{
         type:sequelize.STRING,
@@ -31,6 +32,6 @@ const AdminModel=connect.define('administrator',{
     createdAt: sequelize.DATE,
     updatedAt: sequelize.DATE,
 })
-// connect.sync({force:false})
+// connect.sync({force:true})
 
 module.exports={AdminModel}

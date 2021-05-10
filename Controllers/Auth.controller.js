@@ -38,7 +38,7 @@ class AuthController
       
         let token =jwt.sign({
             data: admin
-        }, 'secretKEY', { expiresIn:60 });
+        }, 'secretKEY', { expiresIn:60 * 60});
         
          return res.status(200).json({
             status:200,

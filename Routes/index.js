@@ -4,7 +4,7 @@ let app = express()
 
 app.use('/Authentication', require('./Auth.route'));
 app.use('/Category', require('./Category.routes'));
+app.use('/Article', require('./Article.route'));
 
-// app.use('/dashboard', require('./dashboard.route'));
 
 module.exports = app
